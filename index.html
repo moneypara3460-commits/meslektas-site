@@ -444,7 +444,7 @@ footer .ac{font-size:12px;color:#7f97bb;width:100%}
         <a class="btn kesfet" href="#nasil">Nasıl çalışır? <span class="ok-asagi">↓</span></a>
       </div>
       <div class="sayilar">
-        <div><b data-say="11">0</b><span>meslek</span></div>
+        <div><b data-say="12">0</b><span>meslek</span></div>
         <div><b data-say="5">0</b><span>kademe, meraktan ustalığa</span></div>
         <div><b data-say="30">0</b><span>soruluk Meslek Pusulası</span></div>
       </div>
@@ -830,6 +830,7 @@ var SOZLUK={
 "Freze Operatörü":["Milling Operator","Fräser","مشغّل التفريز"],
 "Freze ustası":["Milling operator","Fräser","مشغّل تفريز"],
 "Teknisyen":["Technician","Techniker","فني"],
+"Kasiyer":["Cashier","Kassierer","أمين صندوق"],
 "Tasarımcı":["Designer","Designer","مصمم"],
 "Muhasebeci":["Accountant","Buchhalter","محاسب"],
 "Kaynakçı":["Welder","Schweißer","لحّام"],
@@ -966,7 +967,7 @@ function T(tr){if(DIL==="tr")return tr;var e=SOZLUK[tr];return e?e[DIL_SIRA[DIL]
   var azHareket=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   // başlıkta dönen meslek adı
-  var adlar=["Barista","Aşçı","Garson","Mimar","Kaynakçı","Yazılımcı","İtfaiyeci","Tasarımcı","Muhasebeci","Freze ustası","Teknisyen"];
+  var adlar=["Barista","Aşçı","Garson","Mimar","Kaynakçı","Yazılımcı","İtfaiyeci","Tasarımcı","Muhasebeci","Freze ustası","Teknisyen","Kasiyer"];
   var d=document.getElementById("donen"),i=0;
   setInterval(function(){d.classList.add("cik");setTimeout(function(){i=(i+1)%adlar.length;d.textContent=T(adlar[i]);d.classList.remove("cik")},350)},2200);
 
