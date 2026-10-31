@@ -326,6 +326,31 @@ h2{font-size:clamp(30px,4.4vw,46px);line-height:1.08;letter-spacing:-1.2px;margi
 .ilke p{margin:0;font-size:15px;color:var(--gri)}
 .ilke .ik{width:50px;height:50px;border-radius:15px;display:grid;place-items:center;font-size:24px;margin-bottom:14px;background:linear-gradient(145deg,var(--mavi2),var(--mavi));box-shadow:0 5px 0 #1749a8,0 10px 20px rgba(30,99,214,.35),inset 0 1px 0 rgba(255,255,255,.4)}
 
+/* yenilikler */
+.yenilik-izgara{display:grid;grid-template-columns:1.25fr .9fr;gap:34px;align-items:center}
+@media(max-width:860px){.yenilik-izgara{grid-template-columns:1fr}}
+.yenilik-izgara .ilkeler{grid-template-columns:1fr 1fr}
+@media(max-width:560px){.yenilik-izgara .ilkeler{grid-template-columns:1fr}}
+.pk-sahne{display:flex;flex-direction:column;align-items:center;gap:14px}
+.pk{width:280px;height:350px;border-radius:28px;position:relative;overflow:hidden;padding:20px;color:#fff;display:flex;flex-direction:column;
+  background:linear-gradient(180deg,var(--mavi),var(--lacivert));box-shadow:0 30px 60px rgba(10,31,68,.35),0 0 0 6px #fff,0 0 0 8px var(--cizgi);animation:pkSuz 5s ease-in-out infinite}
+.pk::before{content:"";position:absolute;width:240px;height:240px;border-radius:50%;background:var(--mavi2);opacity:.2;top:-90px;right:-90px}
+.pk::after{content:"";position:absolute;width:170px;height:170px;border-radius:50%;background:var(--gok);opacity:.1;bottom:-60px;left:-60px}
+@keyframes pkSuz{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-10px) rotate(2deg)}}
+.pk-logo{font-weight:900;font-size:17px;letter-spacing:-.3px;position:relative;z-index:1}.pk-logo b{color:var(--gok)}
+.pk-orta{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;position:relative;z-index:1}
+.pk-ik{width:96px;height:96px;border-radius:50%;display:grid;place-items:center;font-size:50px;background:rgba(255,255,255,.12);border:2px solid rgba(124,196,255,.6)}
+.pk-ust{color:var(--gok);font-weight:900;font-size:10.5px;letter-spacing:1.6px;margin-top:12px}
+.pk-bas{font-weight:900;font-size:22px;margin-top:3px}
+.pk-alt{color:#dbeafe;font-size:13px;margin-top:5px;line-height:1.35}
+.pk-cip{display:inline-block;background:rgba(255,255,255,.14);border-radius:99px;padding:4px 11px;font-weight:800;font-size:12px;margin-top:10px}
+.pk-alt-cizgi{border-top:1px solid rgba(255,255,255,.15);padding-top:9px;text-align:center;position:relative;z-index:1}
+.pk-alt-cizgi b{display:block;font-size:12.5px}.pk-alt-cizgi small{color:var(--gok);font-size:9.5px}
+.pk-paylas{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(145deg,var(--mavi2),var(--mavi));color:#fff;font-weight:900;border-radius:16px;padding:13px 24px;
+  box-shadow:0 5px 0 #1749a8,0 12px 24px rgba(30,99,214,.35)}
+.pk-uygulamalar{display:flex;gap:10px}
+.pk-uygulamalar span{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;font-size:18px;background:#fff;box-shadow:0 4px 12px rgba(10,31,68,.12)}
+
 /* çağrı */
 .cagri{background:radial-gradient(600px 300px at 80% 0%,#3b82f6,transparent 70%),linear-gradient(135deg,var(--mavi),var(--lacivert));color:#fff;border-radius:30px;padding:56px 28px;text-align:center;overflow:hidden;position:relative}
 .cagri h2{color:#fff;margin-top:0}
@@ -390,6 +415,7 @@ footer .ac{font-size:12px;color:#7f97bb;width:100%}
       <li><a href="#meslekler">Meslekler</a></li>
       <li><a href="#sahneler">Sahneler</a></li>
       <li><a href="#pusula">Meslek Pusulası</a></li>
+      <li><a href="#yenilikler">Yenilikler</a></li>
       <li><a href="#ilkeler">İlkelerimiz</a></li>
     </ul>
     <h3>Yasal</h3>
@@ -536,9 +562,9 @@ footer .ac{font-size:12px;color:#7f97bb;width:100%}
   <div class="wrap">
     <div class="rozet-satir gor">
       <span class="isik-rozet"><span class="ir-ik">🧰</span>Meslekler</span>
-      <span class="sayi-halka"><b>11</b><i></i></span>
+      <span class="sayi-halka"><b>12</b><i></i></span>
     </div>
-    <h2 class="gor">11 meslek, hepsi baştan sona.</h2>
+    <h2 class="gor">12 meslek, hepsi baştan sona.</h2>
     <p class="giris-yazi gor">Kafeden mutfağa, atölyeden ofise, itfaiyeye kadar. Yeni meslekler tek tek, özenle ekleniyor.</p>
     <div class="meslekler">
       <div class="meslek gor sol"><div class="ik">☕</div><h3>Barista</h3><p>Espressodan latte art'a, bar arkasının tamamı.</p></div>
@@ -552,7 +578,8 @@ footer .ac{font-size:12px;color:#7f97bb;width:100%}
       <div class="meslek gor sol"><div class="ik">🎨</div><h3>Grafik Tasarımcı</h3><p>Renk, yazı, düzen ve müşteriyle çalışmak.</p></div>
       <div class="meslek gor sag"><div class="ik">📊</div><h3>Muhasebe Elemanı</h3><p>Belge, kayıt ve hesapların düzeni.</p></div>
       <div class="meslek gor sol"><div class="ik">🚒</div><h3>İtfaiyeci</h3><p>Ekipman, ekip çalışması ve acil durum bilgisi.</p></div>
-      <div class="meslek yeni gor sag"><div class="ik">✨</div><h3>Sıradaki meslek</h3><p>Yolda. Her yeni meslek önce baştan sona test ediliyor.</p></div>
+      <div class="meslek gor sag"><div class="ik">🛒</div><h3>Satış ve Kasa</h3><p>Müşteriyle iletişim, kasa ve tüketici hakları.</p></div>
+      <div class="meslek yeni gor sol"><div class="ik">✨</div><h3>Sıradaki meslek</h3><p>Yolda. Her yeni meslek önce baştan sona test ediliyor.</p></div>
     </div>
   </div>
 </section>
@@ -651,6 +678,37 @@ footer .ac{font-size:12px;color:#7f97bb;width:100%}
   </div>
 </section>
 
+<section id="yenilikler">
+  <div class="wrap">
+    <div class="rozet-satir gor"><span class="isik-rozet acik"><span class="ir-ik">✨</span>Yenilikler</span><span class="sayi-halka acik"><b>4</b><i></i></span></div>
+    <h2 class="gor">Uygulamada seni neler bekliyor?</h2>
+    <p class="giris-yazi gor">Meslektaş her hafta biraz daha büyüyor. İşte son eklenenler.</p>
+    <div class="yenilik-izgara">
+      <div class="ilkeler">
+        <div class="ilke gor sol" data-no="01"><span class="ik">📤</span><b>Başarını paylaş</b><p>Bir kademeyi bitirdiğinde, belgeni aldığında ya da Pusula'yı çözdüğünde şık bir sonuç kartı hazırlanır. Tek dokunuşla WhatsApp'a, Instagram'a ya da istediğin yere gönder.</p></div>
+        <div class="ilke gor sag" data-no="02"><span class="ik">🌐</span><b>4 dilde oyna</b><p>Türkçe, İngilizce ve Almancada 12 mesleğin tüm içeriği baştan sona hazır. Arapçada menüler ve butonlar hazır, meslek içerikleri yakında.</p></div>
+        <div class="ilke gor sol" data-no="03"><span class="ik">⚖️</span><b>Kurallar Türkiye'ye göre</b><p>Hangi dilde oynarsan oyna; iş güvenliği, vergi ve tüketici hakları gibi bilgiler Türkiye'deki mevzuata göre anlatılır.</p></div>
+        <div class="ilke gor sag" data-no="04"><span class="ik">🎨</span><b>Yenilenen tasarım</b><p>Bu siteyle aynı lacivert ve mavi renkler, yeni giriş ekranı ve derli toplu meslek kartları.</p></div>
+      </div>
+      <div class="pk-sahne gor buyu" aria-hidden="true">
+        <div class="pk">
+          <div class="pk-logo">Meslek<b>taş</b></div>
+          <div class="pk-orta">
+            <div class="pk-ik">☕</div>
+            <div class="pk-ust">KADEME TAMAMLANDI</div>
+            <div class="pk-bas">Kalfa Barista</div>
+            <div class="pk-alt">Barista yolunda bir kademe daha tamam!</div>
+            <span class="pk-cip">3/5 kademe</span>
+          </div>
+          <div class="pk-alt-cizgi"><b>Sen de dene 👉 Meslektaş</b><small>moneypara3460-commits.github.io/meslektas-site</small></div>
+        </div>
+        <span class="pk-paylas">📤 Paylaş</span>
+        <div class="pk-uygulamalar"><span>💬</span><span>📸</span><span>✉️</span><span>🔗</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="ilkeler">
   <div class="wrap">
     <div class="rozet-satir gor"><span class="isik-rozet acik"><span class="ir-ik">🛡️</span>İlkelerimiz</span><span class="sayi-halka acik"><b>4</b><i></i></span></div>
@@ -704,6 +762,25 @@ footer .ac{font-size:12px;color:#7f97bb;width:100%}
 
 <script>
 var SOZLUK={
+"Yenilikler":["What's new","Neuigkeiten","الجديد"],
+"Uygulamada seni neler bekliyor?":["What's waiting for you in the app?","Was dich in der App erwartet","ما الذي ينتظرك في التطبيق؟"],
+"Meslektaş her hafta biraz daha büyüyor. İşte son eklenenler.":["Meslektaş grows a little more every week. Here's what's new.","Meslektaş wächst jede Woche ein Stück. Das ist neu.","ينمو Meslektaş قليلًا كل أسبوع. إليك أحدث الإضافات."],
+"Başarını paylaş":["Share your achievement","Teile deinen Erfolg","شارك إنجازك"],
+"Bir kademeyi bitirdiğinde, belgeni aldığında ya da Pusula'yı çözdüğünde şık bir sonuç kartı hazırlanır. Tek dokunuşla WhatsApp'a, Instagram'a ya da istediğin yere gönder.":["When you finish a level, get your certificate or complete the Compass, a stylish result card is created. Send it to WhatsApp, Instagram or anywhere you like with one tap.","Wenn du eine Stufe schaffst, deine Bescheinigung bekommst oder den Kompass löst, entsteht eine schicke Ergebniskarte. Schick sie mit einem Tipp an WhatsApp, Instagram oder wohin du willst.","عندما تُنهي مستوى أو تحصل على شهادتك أو تُكمل البوصلة، تُصنع لك بطاقة نتيجة أنيقة. أرسلها بلمسة واحدة إلى واتساب أو إنستغرام أو أي مكان تريده."],
+"4 dilde oyna":["Play in 4 languages","Spiel in 4 Sprachen","العب بـ 4 لغات"],
+"Türkçe, İngilizce ve Almancada 12 mesleğin tüm içeriği baştan sona hazır. Arapçada menüler ve butonlar hazır, meslek içerikleri yakında.":["All content for the 12 professions is fully available in Turkish, English and German. In Arabic, menus and buttons are ready; profession content is coming soon.","In Türkisch, Englisch und Deutsch sind alle Inhalte der 12 Berufe komplett verfügbar. Auf Arabisch sind Menüs und Schaltflächen fertig, die Berufsinhalte folgen bald.","المحتوى الكامل للمهن الاثنتي عشرة متاح بالتركية والإنجليزية والألمانية. بالعربية القوائم والأزرار جاهزة، ومحتوى المهن قريبًا."],
+"Kurallar Türkiye'ye göre":["Rules based on Türkiye","Regeln nach türkischem Recht","القواعد وفق تركيا"],
+"Hangi dilde oynarsan oyna; iş güvenliği, vergi ve tüketici hakları gibi bilgiler Türkiye'deki mevzuata göre anlatılır.":["Whatever language you play in, topics such as workplace safety, tax and consumer rights are explained according to the regulations in Türkiye.","Egal in welcher Sprache du spielst: Themen wie Arbeitssicherheit, Steuern und Verbraucherrechte werden nach den Vorschriften in der Türkei erklärt.","بأي لغة لعبت، تُشرح موضوعات مثل السلامة المهنية والضرائب وحقوق المستهلك وفق الأنظمة المعمول بها في تركيا."],
+"Yenilenen tasarım":["A fresh design","Neues Design","تصميم متجدد"],
+"Bu siteyle aynı lacivert ve mavi renkler, yeni giriş ekranı ve derli toplu meslek kartları.":["The same navy and blue colours as this website, a new start screen and tidy profession cards.","Dieselben Marine- und Blautöne wie diese Website, ein neuer Startbildschirm und übersichtliche Berufskarten.","نفس ألوان الكحلي والأزرق في هذا الموقع، وشاشة بداية جديدة، وبطاقات مهن مرتّبة."],
+"KADEME TAMAMLANDI":["LEVEL COMPLETE","STUFE GESCHAFFT","اكتمل المستوى"],
+"Kalfa Barista":["Journeyman Barista","Barista-Geselle","باريستا متمرّس"],
+"Barista yolunda bir kademe daha tamam!":["One more level done on the Barista path!","Wieder eine Stufe auf dem Weg Barista geschafft!","مستوى آخر اكتمل في مسار الباريستا!"],
+"3/5 kademe":["Level 3/5","Stufe 3/5","المستوى 3/5"],
+"Sen de dene 👉 Meslektaş":["Try it too 👉 Meslektaş","Probier es auch 👉 Meslektaş","جرّبها أنت أيضًا 👉 Meslektaş"],
+"📤 Paylaş":["📤 Share","📤 Teilen","📤 مشاركة"],
+"Satış ve Kasa":["Sales and Checkout","Verkauf und Kasse","المبيعات والصندوق"],
+"Müşteriyle iletişim, kasa ve tüketici hakları.":["Talking to customers, the till and consumer rights.","Kundenkontakt, Kasse und Verbraucherrechte.","التواصل مع العملاء والصندوق وحقوق المستهلك."],
 "Nasıl çalışır":["How it works","So funktioniert's","كيف يعمل"],
 "Meslekler":["Professions","Berufe","المهن"],
 "Sahneler":["Scenes","Szenen","المشاهد"],
@@ -783,7 +860,7 @@ var SOZLUK={
 "Ustalık":["Mastery","Meisterschaft","الإتقان"],
 "Mesleğin en üst basamağı: işi yönetecek seviyeye çık.":["The top of the profession: reach the level where you run the work.","Die höchste Stufe: Erreiche das Niveau, auf dem du die Arbeit leitest.","قمة المهنة: اصعد إلى مستوى إدارة العمل."],
 "Kademe adları mesleğe göre değişir. Örneğin Barista'da Merak → Çırak → Kalfa → Usta → Baş barista; Salon Servisi'nde Merak → Komi → Garson → Şef garson → Salon şefi.":["Level names vary by profession. For Barista: Curiosity → Apprentice → Journeyman → Master → Head barista; for Restaurant Service: Curiosity → Busser → Waiter → Head waiter → Restaurant manager.","Die Stufennamen hängen vom Beruf ab. Beim Barista: Neugier → Lehrling → Geselle → Meister → Head-Barista; im Restaurantservice: Neugier → Commis → Kellner → Chef de Rang → Restaurantleiter.","تختلف أسماء المستويات حسب المهنة. في الباريستا: الفضول ← متدرّب ← حِرفي ← معلّم ← رئيس الباريستا؛ وفي خدمة الصالة: الفضول ← مساعد نادل ← نادل ← رئيس النُدُل ← مدير الصالة."],
-"11 meslek, hepsi baştan sona.":["11 professions, each from start to finish.","11 Berufe, jeder von Anfang bis Ende.","١١ مهنة، كلٌّ منها من البداية إلى النهاية."],
+"12 meslek, hepsi baştan sona.":["12 professions, each from start to finish.","12 Berufe, jeder von Anfang bis Ende.","١٢ مهنة، كلٌّ منها من البداية إلى النهاية."],
 "Kafeden mutfağa, atölyeden ofise, itfaiyeye kadar. Yeni meslekler tek tek, özenle ekleniyor.":["From café to kitchen, workshop to office, all the way to the fire station. New professions are added one by one, with care.","Vom Café in die Küche, von der Werkstatt ins Büro bis zur Feuerwache. Neue Berufe kommen nach und nach, mit Sorgfalt.","من المقهى إلى المطبخ، ومن الورشة إلى المكتب، وحتى الإطفاء. تُضاف مهن جديدة واحدةً تلو الأخرى بعناية."],
 "Espressodan latte art'a, bar arkasının tamamı.":["From espresso to latte art – everything behind the bar.","Von Espresso bis Latte Art – alles hinter der Bar.","من الإسبريسو إلى فن اللاتيه، كل ما وراء البار."],
 "Mutfak düzeni, hijyen, temel ve ileri pişirme.":["Kitchen order, hygiene, basic and advanced cooking.","Küchenorganisation, Hygiene, Grund- und Fortgeschrittenenkochen.","تنظيم المطبخ، والنظافة، والطهي الأساسي والمتقدم."],
